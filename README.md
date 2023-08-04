@@ -23,3 +23,10 @@ Quanto aos vendedores, verificar o histórico de ataques hackers, o histórico d
 Para prevenir fraudes, são sugeridas medidas como análise em tempo real de padrões de compra, estabelecer limites de valor para transações em certos horários, utilizar autenticação de 2 fatores para transações específicas, alertar sobre chargebacks e outros fatores de risco, bloquear tentativas seguidas de transações em curto espaço de tempo e incentivar a documentação das transações pelos estabelecimentos.
 
 Essas estratégias visam proteger tanto os consumidores quanto os vendedores, garantindo transações seguras e reduzindo o risco de fraudes.
+
+# SQL
+
+Foi desenvolvida uma query SQL com o intuito de prever possiveis fraudes a partir dos dados fornecidos. Bloquear operações como:
+- Chargeback prévio
+- Fora do horário e valor predefinidos
+- Multiplas operações em sequencia num tempo que o predefinido.
