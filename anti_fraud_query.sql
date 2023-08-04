@@ -1,4 +1,4 @@
-# Fazendo análise técnica das colunas
+#Fazendo análise técnica das colunas
 
 SELECT 
   COUNT(*) AS total_rows,
@@ -13,8 +13,8 @@ SELECT
 FROM `payment_analysis.transactions`;
 
 
-## Chequei e filtrei as transações onde has_cbk = true e valor > 1000 entre 22 e 6 para um status Denied
-## Criando uma nova view 'time_value_cbk_denied'
+#Chequei e filtrei as transações onde has_cbk = true e valor > 1000 entre 22 e 6 para um status Denied
+#Criando uma nova view 'time_value_cbk_denied'
 
 WITH denied AS (SELECT *,
   CASE
@@ -27,8 +27,8 @@ FROM `winged-helper-384014.payment_analysis.transactions` )
 SELECT * FROM denied
 WHERE transaction_status IS NOT NULL
 
-## Filtrei as MULTIPLAS operaçoes seguidas com diferença de tempo menor que 30 min
-## Criei uma nova view 'multiple_denied'
+#Filtrei as MULTIPLAS operaçoes seguidas com diferença de tempo menor que 30 min
+#Criei uma nova view 'multiple_denied'
 
 WITH multiple_trans AS (SELECT
   transaction_id,
@@ -58,8 +58,8 @@ SELECT transaction_id,
 FROM multiple_trans 
 WHERE TIMESTAMP_DIFF(transaction_date, prev_transaction_time, HOUR) <= 0.5;
 
-## Filtrei as operaçoes que estavam aprovadas e nao se encaixavam nos filtros anteriores.
-## Criei uma nova view 'approved_transactions'
+#Filtrei as operaçoes que estavam aprovadas e nao se encaixavam nos filtros anteriores.
+#Criei uma nova view 'approved_transactions'
 
 SELECT *
   ,"Approved" AS transaction_status
@@ -71,7 +71,7 @@ WHERE transaction_id NOT IN (
     SELECT transaction_id FROM `payment_analysis.time_value_cbk_denied`
   );
 
-## Selecionei todos os resultados e juntei em uma tabela com o status approved or denied 
+#Selecionei todos os resultados e juntei em uma tabela com o status approved or denied 
 
 SELECT transaction_id, transaction_status FROM `payment_analysis.approved_transactions`
 UNION ALL
