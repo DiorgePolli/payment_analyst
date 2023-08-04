@@ -1,4 +1,4 @@
-## Fazendo análise técnica das colunas
+#Fazendo análise técnica das colunas
 
 SELECT 
   COUNT(*) AS total_rows,
@@ -71,7 +71,7 @@ WHERE transaction_id NOT IN (
     SELECT transaction_id FROM `payment_analysis.time_value_cbk_denied`
   );
 
-## selecionei todos os resultados e juntei em uma tabela com o status approved or denied
+-- selecionei todos os resultados e juntei em uma tabela com o status approved or denied --
 
 SELECT transaction_id, transaction_status FROM `payment_analysis.approved_transactions`
 UNION ALL
