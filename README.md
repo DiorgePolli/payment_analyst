@@ -1,6 +1,3 @@
-# payment_analyst
-Um estudo de caso relatando como é o fluxo de pagamento no Brasil e as possibilidades de se evitar fraudes.
-
 # Estudo de Caso para Payment Analyst
 Este é um estudo de caso que explora o fluxo de pagamento e o papel dos principais participantes em uma transação financeira, como o portador (cliente), o lojista (estabelecimento comercial), a credenciadora, os facilitadores, a bandeira e o banco emissor.
 
