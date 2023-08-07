@@ -7,7 +7,7 @@ O estudo também aborda as diferenças entre adquirente, sub-adquirente e gatewa
 
 O exemplo de resposta fornecido demonstra uma abordagem empática para lidar com um cliente que está contestando uma transação, oferecendo suporte e sugestões para resolver a disputa de chargeback.
 
-# Análise de Dados
+## Análise de Dados
 
  O conjunto de dados contém informações sobre 3199 transações, incluindo detalhes como transaction_id, merchant_id, user_id, card_number, transaction_date, transaction_amount, device_id e has_cbk. Os valores nulos foram encontrados apenas na coluna device_id, o que pode indicar transações online.
 
@@ -21,7 +21,7 @@ Para prevenir fraudes, são sugeridas medidas como análise em tempo real de pad
 
 Essas estratégias visam proteger tanto os consumidores quanto os vendedores, garantindo transações seguras e reduzindo o risco de fraudes.
 
-# SQL
+## SQL
 
 Foi desenvolvida uma query SQL com o intuito de prever possiveis fraudes a partir dos dados fornecidos. Bloquear operações como:
 - Chargeback prévio
